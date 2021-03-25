@@ -4,10 +4,13 @@ void setup() {
 }
 
 void loop() {
-  String a;
+   if(Serial.available()) 
+   {
+    String a;
   a = Serial.readString();
-  if(Serial.available()) {
-  if (a == "ON") {
+
+  if (a == "ON") 
+  {
     digitalWrite(11, HIGH);
     Serial.println("LED켜짐");
     delay(1000);
@@ -16,7 +19,5 @@ void loop() {
     Serial.println("LED꺼짐");
     delay(1000);
   }
-  } else {
-    Serial.println("Error:");
   }
 }

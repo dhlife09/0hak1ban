@@ -21,6 +21,7 @@ const int buttonPin=2;
 
 void setup() {
   Serial.begin(9600);
+  Serial.println("[알림] 시리얼 모니터 입니다. 사용자는 I2C LCD 화면을 보게 됩니다.");
   pinMode(buttonPin, INPUT);
   lcd.init();                      // LCD 초기화
   lcd.backlight();                // 백라이트 켜기
